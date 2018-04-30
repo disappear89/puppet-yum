@@ -40,6 +40,6 @@ define yum::config (
     incl    => '/etc/yum.conf',
     lens    => 'Yum.lns',
     context => '/files/etc/yum.conf/main/',
-    changes => $_changes,
+    changes => '$_changes',
   }
 }
