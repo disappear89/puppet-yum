@@ -36,6 +36,8 @@ define yum::config (
     default   => "set ${key} '${_ensure}'",
   }
 
+  debug { "changes: $_changes key: $key":}
+
   augeas { "yum.conf_${key}":
     incl    => '/etc/yum.conf',
     lens    => 'Yum.lns',
